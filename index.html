@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff9ec">
+  <title>おもいギフト｜大切な人に、想いが伝わる贈りもの。</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<header class="header">
+  <a class="brand" href="#home" aria-label="おもいギフト ホーム"><span class="brand-icon">🎁</span><span>おもい<span class="brand-gold">ギフト</span></span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く" aria-expanded="false">☰</button>
+  <nav class="nav" id="nav">
+    <a class="active" href="#home">ホーム</a><a href="#finder">贈りものを探す</a><a href="#recommendations">おすすめ</a><a href="#howto">使い方</a><a href="#about">このサイトについて</a>
+  </nav>
+  <a class="favorite-top" href="#favorites">☆ お気に入り <span id="favoriteCount">0</span></a>
+</header>
+<main id="home">
+  <section class="hero">
+    <div class="hero-copy">
+      <div class="eyebrow">🎁　大切な人に、想いが伝わる贈りもの。</div>
+      <h1>おもい<span>ギフト</span><b class="outline-heart">♡</b></h1>
+      <h2>あなたの想いにぴったりな<br>贈りものを見つけよう</h2>
+      <p>誕生日・記念日・ちょっとしたプレゼントまで<br>シーンや相手に合わせて、ぴったりの贈りものを提案します。</p>
+      <a class="hero-cta" href="#finder">贈りものを探す <span>↗</span></a>
+    </div>
+    <div class="hero-art" role="img" aria-label="あたたかく光る黄色いプレゼントとテディベア"><div class="speech">小さな贈りものが<br>大きな笑顔に ♡</div></div>
+  </section>
+
+  <section class="finder" id="finder">
+    <div class="finder-heading"><div class="search-icon">⌕</div><div><h2>贈りものを探す</h2><p>いくつかの条件を選んで、ぴったりの贈りものを見つけましょう！</p></div><div class="finder-note">どんな贈りものが見つかるかな？<br>さっそく探してみよう！ ✨</div></div>
+    <form id="giftForm" class="filters">
+      <label class="filter"><span>👤 贈る相手</span><select id="recipient"><option value="any">選択してください</option><option value="friend">友だち</option><option value="partner">恋人・パートナー</option><option value="family">家族</option><option value="parent">お父さん・お母さん</option><option value="teacher">先生・お世話になった人</option><option value="coworker">同僚・先輩</option><option value="child">子ども</option></select></label>
+      <label class="filter"><span>⚧️ 贈る相手の性別</span><select id="gender"><option value="any">指定しない</option><option value="female">女性</option><option value="male">男性</option><option value="other">その他・回答しない</option></select></label>
+      <label class="filter"><span>🎂 贈る相手の年齢</span><select id="age"><option value="any">指定しない</option><option value="child">12歳以下</option><option value="teen">13〜19歳</option><option value="twenties">20代</option><option value="thirties">30代</option><option value="fortyplus">40代以上</option></select></label>
+      <label class="filter"><span>🎁 シーン</span><select id="occasion"><option value="any">選択してください</option><option value="birthday">誕生日</option><option value="anniversary">記念日</option><option value="thankyou">お礼・感謝</option><option value="graduation">卒業・合格祝い</option><option value="christmas">クリスマス</option><option value="housewarming">引っ越し・新生活</option><option value="justbecause">なんでもない日</option><option value="encouragement">応援・励まし</option></select></label>
+      <label class="filter"><span>🪙 予算</span><select id="budget"><option value="any">選択してください</option><option value="low">〜¥1,000</option><option value="small">¥1,000〜¥2,999</option><option value="medium">¥3,000〜¥4,999</option><option value="high">¥5,000〜¥9,999</option><option value="premium">¥10,000以上</option></select></label>
+      <button class="search-button" type="submit">⌕　贈りものを探す</button>
+    </form>
+  </section>
+
+  <section class="features" id="howto">
+    <article><span class="feature-icon">💡</span><div><h3>ぴったりな提案</h3><p>条件に合わせて<br>おすすめの贈りものを提案</p></div></article>
+    <article><span class="feature-icon">❤️</span><div><h3>いろいろなシーン</h3><p>誕生日・記念日・お祝いなど<br>様々なシーンに対応</p></div></article>
+    <article><span class="feature-icon">⭐</span><div><h3>選びやすい</h3><p>カテゴリごとに<br>簡単に探せる</p></div></article>
+    <article><span class="feature-icon">🎁</span><div><h3>お気に入り保存</h3><p>気になる贈りものを<br>保存して後で見返せる</p></div></article>
+  </section>
+
+  <section class="results-section hidden" id="resultsSection" aria-live="polite">
+    <div class="results-title"><div><span class="mini-label">YOUR GIFT IDEAS</span><h2>おすすめの贈りもの <span>🎁</span></h2><p id="resultSummary">あなたにぴったりの贈りものを集めました。</p></div><button id="resetButton" class="reset-button" type="button">条件をリセット</button></div>
+    <div id="results" class="results-grid"></div>
+  </section>
+  <section class="results-section" id="recommendations">
+    <div class="results-title"><div><span class="mini-label">PICK UP</span><h2>人気の贈りもの <span>✨</span></h2><p>何を贈るか迷ったら、こちらもチェック。</p></div></div>
+    <div id="popularResults" class="results-grid"></div>
+  </section>
+  <section class="favorites-section" id="favorites"><h2>♡ お気に入りリスト</h2><p>気になった贈りものは☆を押して保存できます。</p><div id="favoriteResults" class="results-grid"><div class="empty-favorite">まだお気に入りはありません。気になる贈りものを保存してね ♡</div></div></section>
+  <section class="about" id="about"><span>🌼</span><div><h2>贈りものは、相手を想うことから。</h2><p>大切な人の笑顔を思い浮かべながら、心のこもった贈りものを見つけてみませんか？</p></div></section>
+</main>
+<footer class="footer"><div class="footer-flowers">✿　✧　✿　✧　✿</div><p>© 2026 PAN CHERRY PHOO</p><a href="#home">ページのトップへ ↑</a></footer>
+</body>
+</html>
